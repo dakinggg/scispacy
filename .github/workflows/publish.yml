@@ -6,7 +6,9 @@ name: Publish Package
 on:
   release:
     types: [published]
-  workflow_dispatch:
+  pull_request:
+    branches:
+    - main
 
 jobs:
   pypi-publish:
